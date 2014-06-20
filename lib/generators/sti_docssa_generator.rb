@@ -32,7 +32,7 @@ class StiDocssaGenerator < Rails::Generators::Base
       copy_file "specifics/__specifics.sass", Rails.root.join("app","assets","stylesheets", "specifics/__specifics.sass")
 
       # vendor files
-      copy_file "vendor/__normalize.scss", Rails.root.join("app","assets","stylesheets", "vendor/__normalize.scss")
+      copy_file "vendor/__normalize.scss", Rails.root.join("app","assets","stylesheets", "vendor/_normalize.scss")
       
 
       # html files

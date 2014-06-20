@@ -7,11 +7,11 @@ require "sti_docssa/version"
 Gem::Specification.new do |s|
   s.name        = "sti_docssa"
   s.version     = StiDocssa::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of StiDocssa."
-  s.description = "TODO: Description of StiDocssa."
+  s.authors     = ["Adam Bertrand"]
+  s.email       = ["adam@sportstechinc.com"]
+  s.homepage    = "http://www.sportstechinc.com"
+  s.summary     = "STI Front End Generator"
+  s.description = "Generates template stylesheets for new STI projects"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -19,5 +19,4 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.1.0"
 
-  s.add_development_dependency "sqlite3"
 end
