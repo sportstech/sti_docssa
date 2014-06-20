@@ -1,0 +1,15 @@
+@function unbust-font-url($file, $hash: false)
+  $addition: ""
+  @if $hash
+    $addition: if($hash == "iefix", "?##{$hash}", "##{$hash}")
+  $path: "url('#{font-path($file)}#{$addition}')"
+  @return unquote($path)
+
+@function gameStateClassNames($ids, $nested)
+  $cls-list: ()
+  @if $ids
+    @each $id in $ids
+      $cls-list: append($cls-list, #{if( $nested == true, #{unquote("&")}, null )}#{unquote(".")}#{$id}#{if( $nested == outside, #{unquote(" &")}, null )}, comma)
+    @return $cls-list
+  @else
+    @warn "No ids were passed to the function: gameStateClassName() /games/__helpers.sass"

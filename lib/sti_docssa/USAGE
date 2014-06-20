@@ -1,0 +1,43 @@
+Description:
+    This Generator is to import starter folders and files for STI projects
+
+Example:
+    rails generate sti_docssa APP CLASS NAME
+
+    This will create:
+    app
+    +   stylesheets
+    ¦    ¦   custom_desktop.sass
+    ¦    ¦   custom_handheld.sass
+    ¦    ¦   custom_tablet.sass [optional]
+    ¦    ¦
+    ¦    +---base
+    ¦    ¦   ¦   __base.sass
+    ¦    ¦   ¦   _config.sass
+    ¦    ¦   ¦
+    ¦    ¦   +---project
+    ¦    ¦   ¦       __project.sass
+    ¦    ¦   ¦       _fonts.sass
+    ¦    ¦   ¦       _globals.sass
+    ¦    ¦   ¦       _helpers.sass
+    ¦    ¦   ¦       _variables.sass
+    ¦    ¦   ¦
+    ¦    ¦   +---utils
+    ¦    ¦           __utils.sass
+    ¦    ¦           _helpers.sass
+    ¦    ¦           _mixins.sass
+    ¦    ¦           _system.sass
+    ¦    ¦
+    ¦    +---components
+    ¦    ¦   ¦   __components.sass
+    ¦    ¦
+    ¦    +---specifics
+    ¦    ¦   ¦   __specifics.sass
+    ¦    ¦   ¦
+    ¦    ¦
+    ¦    +---vendor
+    ¦        _normalize.scss
+    +   views
+    ¦    ¦   desktop.html.erb
+    ¦    ¦   handheld.html.erb
+    ¦    ¦   tablet.html.erb [optional]

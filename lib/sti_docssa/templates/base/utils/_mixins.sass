@@ -1,0 +1,89 @@
+
+// _____ MIXINS _____ //
+
+// x-rem returns a property and its px value converted to REM relies on (compass/support) and _functions.sass
+=x-rem($property, $value, $from-size: $base-font-size)
+  // rely on support variables for this
+  @if $value != 0px
+    @if $legacy-support-for-ie8 or $debug
+      #{$property}: $value
+    #{$property}: rem($value, $from-size)
+
+
+=render-rules($show: true)
+  @if $show
+    @content
+
+=handheld-only($this: $platform)
+  @if $this == "handheld"
+    @content
+
+=tablet-only($this: $platform)
+  @if $this == "tablet"
+    @content 
+    
+=desktop-only($this: $platform)
+  @if $this == "desktop"
+    @content 
+    
+=not-tablet($this: $platform)
+  @if $this != "tablet"
+    @content
+
+=not-desktop($this: $platform)
+  @if $this != "desktop"
+    @content
+    
+=not-handheld($this: $platform)
+  @if $this != "handheld"
+    @content
+
+
+=game-states($ids: null, $nested: outside)
+  @if $ids
+    #{gameStateClassNames($ids, $nested)}
+      @content
+
+// Fonts
+// ==========================================================================
+
+=importFont($fontname, $filename, $svgLabel, $isBold: false, $isItalic: false)
+
+  @font-face
+    font-family: $fontname
+    src: unbust-font-url('fonts/#{$filename}.eot')
+    src: unbust-font-url('fonts/#{$filename}.eot?#iefix') format('embedded-opentype'), unbust-font-url('fonts/#{$filename}.woff') format('woff'), unbust-font-url('fonts/#{$filename}.ttf') format('truetype'), unbust-font-url('fonts/#{$filename}.svg##{$svgLabel}') format('svg')
+
+    @if $isBold
+      font-weight: bold
+    @else
+      font-weight: normal
+
+    @if $isItalic
+      font-style: italic
+    @else
+      font-style: normal
+
+// Icons
+// ==========================================================================
+
+=with-icon($position: before)
+  $float: left
+  $margin: 0 grid-units() 0 0
+  @if $position == after
+    $float: right
+    $margin-right: 0
+    $margin-: 0 0 0 grid-units()
+  display: inline-block
+  position: relative
+  &:#{$position}
+    float: $float
+    width: 1em
+    font-family: $icon-font
+    content: attr(data-icon)
+    margin: $margin
+    speak: none
+    text:
+      transform: none
+      align: center
+    color: #fff

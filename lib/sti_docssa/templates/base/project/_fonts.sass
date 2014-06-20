@@ -1,0 +1,19 @@
+@import "compass/css3/font-face"
+
++define("project-fonts")
+
+  // _____ FONTS _____ //
+
+  // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= //
+  // importFont($fontname, $filename, $svgLabel, $isBold: false, $isItalic: false)
+  // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= //
+
+  //+importFont("titillium", "titilliumweb-regular-webfont", "titillium_webregular")
+  //+importFont("titillium", "titilliumweb-bold-webfont", "titillium_webbold", $isBold: true)
+  //+importFont("robotoSlab", "robotoslab-regular-webfont", "roboto_slabregular")
+  //+importFont("robotoSlab", "robotoslab-bold-webfont", "roboto_slabbold", $isBold: true)
+
+  +importFont($icon-font, $icon-font, $icon-font)
+
+  //Base64 Embeded Fonts for Amazon S3 hosted icon fonts
+  //+font-face($icon-font, inline-font-files("#{$icon-font}.eot", eot, "#{iconset}.woff", woff, "#{iconset}.ttf", truetype, "#{iconset}.svg", svg))

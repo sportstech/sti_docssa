@@ -1,0 +1,25 @@
+
++define("universal-helpers")
+
+  %icon-only
+    +hide-text
+    text-decoration: none
+    width: 1em
+    &:before
+      text-indent: 0
+      font-weight: normal
+
+  // Icon display
+  [data-icon]
+    +with-icon
+    &:before
+      font-weight: normal
+
+  [data-display="icon-only"]
+    @extend %icon-only
+
+  %clearfix
+    &:after
+      content: ""
+      display: table
+      clear: both
