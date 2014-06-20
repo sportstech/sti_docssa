@@ -12,7 +12,9 @@ Then in terminal run:
     
     rails g sti_docssa
 
-### Options, in terminal run:
+### Options
+
+For options and a diagram of what is generated, in terminal run:
     
     rails g sti_docssa --help
 
