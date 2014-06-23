@@ -28,10 +28,20 @@ For options and a diagram of what is generated, in terminal run:
 
     rails g sti_docssa [name of application class]
 
-i.e.
-    
-    <div class="sti_app">
-        //your application markup here
-    </div>
+For example, to create a default application with an applicatoin class of 'foo_bar' with no tablet css or layout files generated, in terminal run:
+
+    rails g sti_docssa foo_bar --no-tablet
+
+the generated code, for example:
+
+    <body>
+        <div class="foo_bar">
+
+            //your application markup here
+
+        </div>
+    </body>
+
+
 
 Uses MIT-LICENSE
